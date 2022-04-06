@@ -1,2 +1,8 @@
 echo "Welcome to employee wage calculation"
-echo "Added a new line"
+num=$((RANDOM%2));
+if [ $num -eq 0 ]
+then
+	echo "Emp is present"
+else
+	echo "Emp is absent"
+fi
