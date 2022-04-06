@@ -1,8 +1,15 @@
-echo "Welcome to employee wage calculation"
-num=$((RANDOM%2));
-if [ $num -eq 0 ]
+isPartTime=1;
+isFullTime=2;
+empNo=$((RANDOM%3));
+empRatePerHr=20;
+if [ $isFullTime -eq $empNo ];
 then
-	echo "Emp is present"
+	empHrs=8;
+elif [ $isPartTime -eq $empNo ];
+then
+	empHrs=4;
 else
-	echo "Emp is absent"
+	empHrs=0;
 fi
+salary=$(($empRatePerHr*$empHrs));
+echo $salary;
